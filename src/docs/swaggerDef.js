@@ -10,7 +10,10 @@ const swaggerDef = {
   },
   servers: [
     {
-      url: `http://localhost:${config.port}/api`,
+      url:
+        config.env === 'development'
+          ? `http://localhost:${config.port}/api`
+          : `https://efuse-backend-hamza.herokuapp.com/api`,
     },
   ],
 };
