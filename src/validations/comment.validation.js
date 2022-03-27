@@ -21,7 +21,7 @@ const updateComment = {
 
 const updateCommentLikes = {
   params: Joi.object().keys({
-    postId: Joi.required().custom(objectId),
+    commentId: Joi.required().custom(objectId),
   }),
   body: Joi.object()
     .keys({
